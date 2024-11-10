@@ -1,74 +1,58 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import ThemeToggle from '@/components/ThemeToggle';
+// import ThemeToggle from '@/components/ThemeToggle';
 
-const openSans = localFont({
+const workSans = localFont({
   src: [
     {
-      path: './fonts/OpenSans-Regular.ttf',
-      weight: '400',
+      path: './fonts/WorkSans-Black.ttf',
+      weight: '900',
       style: 'normal',
     },
     {
-      path: './fonts/OpenSans-Italic.ttf',
-      weight: '400',
-      style: 'italic',
-    },
-    {
-      path: './fonts/OpenSans-Light.ttf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: './fonts/OpenSans-LightItalic.ttf',
-      weight: '300',
-      style: 'italic',
-    },
-    {
-      path: './fonts/OpenSans-Medium.ttf',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: './fonts/OpenSans-MediumItalic.ttf',
-      weight: '500',
-      style: 'italic',
-    },
-    {
-      path: './fonts/OpenSans-SemiBold.ttf',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: './fonts/OpenSans-SemiBoldItalic.ttf',
-      weight: '600',
-      style: 'italic',
-    },
-    {
-      path: './fonts/OpenSans-Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: './fonts/OpenSans-BoldItalic.ttf',
-      weight: '700',
-      style: 'italic',
-    },
-    {
-      path: './fonts/OpenSans-ExtraBold.ttf',
+      path: './fonts/WorkSans-ExtraBold.ttf',
       weight: '800',
       style: 'normal',
     },
     {
-      path: './fonts/OpenSans-ExtraBoldItalic.ttf',
-      weight: '800',
-      style: 'italic',
+      path: './fonts/WorkSans-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-Thin.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-Light.ttf',
+      weight: '200',
+      style: 'normal',
+    },
+    {
+      path: './fonts/WorkSans-ExtraLight.ttf',
+      weight: '100',
+      style: 'normal',
     },
   ],
-  variable: '--font-open-sans',
+  variable: '--font-work-sans',
 });
-
 export const metadata: Metadata = {
   title: 'Sabin Shrestha | Full Stack Developer | MERN & Next.js Specialist',
   description:
@@ -84,8 +68,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${openSans.variable} `}>
-        <ThemeToggle />
+      <body className={`${workSans.variable} `}>
+        {/* <ThemeToggle /> */}
         {children}
       </body>
     </html>

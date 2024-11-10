@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Moon, Sun } from 'lucide-react';
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState('');
@@ -25,12 +24,7 @@ const ThemeToggle = () => {
     localStorage.setItem('theme', newTheme);
   };
   return (
-    <button
-      className='border-text border-2 border- p-2 rounded-xl fixed top-10 right-10 '
-      onClick={toggleTheme}
-    >
-      {theme === 'dark' ? <Sun /> : <Moon />}
-    </button>
+    <button onClick={toggleTheme}>{theme === 'dark' ? '🌙' : '☀️'}</button>
   );
 };
 

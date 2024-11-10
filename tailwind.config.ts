@@ -6,16 +6,16 @@ export default {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         background: 'var(--background)',
         text: 'var(--text)',
         accent: 'var(--accent)',
+        primary: 'var(--primary)',
       },
       fontFamily: {
-        'open-sans': ['var(--font-open-sans)'],
+        'work-sans': ['var(--font-work-sans)'],
       },
     },
   },

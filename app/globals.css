@@ -3,18 +3,61 @@
 @tailwind utilities;
 
 :root {
-  --background: #ededed;
-  --text: #000000;
-  --accent: #8f8f8f;
-}
-
-[data-theme='dark'] {
   --background: #000000;
   --text: #ededed;
-  --accent: #8f8f8f;
+  --accent: #ffffff;
+  --primary: #c6c7f7;
+}
+
+/* [data-theme='dark'] {
+  --background: #000000;
+  --text: #ededed;
+  --accent: #1e1e1e;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes ani-button {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.1, 0.9, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.animated-button {
+  animation: ani-button 1s infinite;
+}
+
+@layer utilities {
+  .flex-between {
+    @apply flex items-center justify-center;
+  }
+
+  .tranimate {
+    @apply transition-all ease-in-out duration-200;
+  }
+
+  .water {
+    @apply bg-gradient-to-b from-blue-500 to-blue-400;
+  }
+
+  .water-reverse {
+    @apply bg-gradient-to-t from-blue-500 to-blue-400;
+  }
+  .ani-button {
+    @apply animated-button tranimate;
+  }
 }
 
 body {
   background-color: var(--background);
   color: var(--text);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
