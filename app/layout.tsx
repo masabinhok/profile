@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+import Music from '@/components/Music';
 // import ThemeToggle from '@/components/ThemeToggle';
 
 const workSans = localFont({
@@ -70,6 +71,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${workSans.variable} `}>
         {/* <ThemeToggle /> */}
+        <Music />
         {children}
       </body>
     </html>

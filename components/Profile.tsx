@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Download } from 'lucide-react';
 import rdr2 from '@/public/rdr2.png';
 import sabin from '@/public/sabin.jpg';
 import { skills } from '@/lib/skills';
 import TimeDisplay from './TimeDisplay';
 import { socials } from '@/lib/socials';
 import HireMe from './HireMe';
+import { Download } from 'lucide-react';
 
 const Profile = () => {
   return (
@@ -47,15 +47,6 @@ const Profile = () => {
           </div>
 
           <div className='flex-1 flex flex-col water    w-full h-full p-3'>
-            <p className='text-sm  '>
-              {' '}
-              <span className=' font-semibold text-primary'>
-                {' '}
-                Listening to:{' '}
-              </span>
-              <span>DIE FOR YOU </span>
-              <span className='italic text-xs'>The Weekend</span>
-            </p>
             <p className='text-sm  p-2 '>
               <span className=' font-semibold text-primary'>Playing: </span>{' '}
               <Image className='w-36 h-auto' src={rdr2} alt='' />
