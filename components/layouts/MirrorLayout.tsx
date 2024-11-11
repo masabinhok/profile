@@ -6,7 +6,7 @@ import Work from '@/components/Work';
 import Connect from '@/components/Connect';
 
 const MirrorLayout = () => {
-  const [mirror, setMirror] = useState('profile');
+  const [mirror, setMirror] = useState('work');
 
   const sections = [
     { title: 'Profile' },
@@ -49,7 +49,7 @@ const MirrorLayout = () => {
           </Link>
         ))}
       </section>
-      <div className='flex-[1]'></div>
+      <div className='flex-[1] max-md:hidden'></div>
 
       <section className='flex-[2] p-5 pt-0 tranimate overflow-y-auto'>
         {renderContent()}
