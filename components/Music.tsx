@@ -23,7 +23,7 @@ const Music = () => {
   };
 
   return (
-    <div className='fixed top-0 right-2 p-1'>
+    <div className='absolute top-0 right-2 p-1'>
       <p onClick={handleMusic} className='text-sm cursor-pointer'>
         <span className='font-semibold text-primary'>Music: </span>
         <span>Dil Basyo </span>
