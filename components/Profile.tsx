@@ -10,8 +10,8 @@ import HireMe from './HireMe';
 
 const Profile = () => {
   return (
-    <main className='max-w-[1320px] max-sm:p-2 p-5 pb-0  mt-0 w-full '>
-      <h2 className='py-3 text-sm'>
+    <main className='max-w-[1320px] max-sm:p-2 p-5 pb-0  mb-5 w-full '>
+      <h2 className='py-3 text-sm border-b-2'>
         <span className='text-accent font-semibold'>Welcome!</span>
         <span className='italic'>
           {' '}
@@ -19,7 +19,7 @@ const Profile = () => {
         </span>
       </h2>
 
-      <section className='flex flex-col w-full relative rounded-xl '>
+      <section className='flex flex-col w-full relative rounded-xl mt-5 '>
         <section className='w-full flex  h-[240px] border-b-2  '>
           <div className='flex-1 flex flex-col water border-r-2 gap-3   w-full h-full p-3 relative'>
             <p className='text-sm  '>
@@ -84,11 +84,18 @@ const Profile = () => {
             </div>
           </div>
         </section>
-        <Image
-          className='w-36 absolute left-10 top-[150px] border-4 z-10 max-sm:w-24 max-sm:h-24 border-gray-200 h-36 rounded-full max-sm:top-[200px] '
-          src={sabin}
-          alt='user'
-        />
+
+        <div className='group'>
+          {' '}
+          <Image
+            className='w-36 absolute left-10 top-[150px] border-4 z-10 max-sm:w-24 max-sm:h-24 border-gray-200 h-36 rounded-full max-sm:top-[200px]  '
+            src={sabin}
+            alt='user'
+          />
+          <h2 className='absolute hidden  group-hover:block text-sm text water border-b-2  px-6 py-2 rounded-xl  text- z-20 left-2 cursor-default tranimate top-[195px]'>
+            Ik, i have to click a good one.
+          </h2>
+        </div>
       </section>
       <section className='flex max-lg:flex-col justify-between w-full relative p-10 rounded-br-xl rounded-bl-xl water-reverse     '>
         <div className='mt-10 max-w-[300px]'>
