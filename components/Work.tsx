@@ -6,7 +6,7 @@ const Work = () => {
   return (
     <main className='max-w-[1320px] max-sm:p-2 p-5 pb-0  mt-0 w-full mb-5 '>
       <h2 className='py-3 text-sm border-b-2'>
-        <span className='text-primary font-semibold'>My Works</span>
+        <span className='text-accent font-semibold'>My Works</span>
         <span className='italic'>
           {' '}
           This section showcases the projects that have challenged, inspired,
@@ -30,7 +30,7 @@ const Work = () => {
 
             <h2 className='font-bold text-primary'>{project.title}</h2>
             <p className='text-sm line-clamp-1 mb-5'>{project.context}</p>
-            <div className='flex font-semibold text-sm gap-3 italic text-accent '>
+            <div className='flex flex-wrap font-semibold text-sm gap-2 mb-2 italic text-accent '>
               {project.techStack.map((stack) => (
                 <div key={stack}>{stack}</div>
               ))}
