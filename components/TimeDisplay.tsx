@@ -4,15 +4,21 @@ import { getExperiencedTime } from '@/lib/utils';
 
 const TimeDisplay: React.FC<{ dateString: string }> = ({ dateString }) => {
   const [time, setTime] = useState(getExperiencedTime(dateString));
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+
     const interval = setInterval(() => {
       setTime(getExperiencedTime(dateString));
-    }, 1000); // Update every second
+    }, 1000);
 
-    // Cleanup interval on component unmount
     return () => clearInterval(interval);
   }, [dateString]);
+
+  if (!mounted) {
+    return <span className='flicker'>...</span>;
+  }
 
   return (
     <span className='italic font-normal  text-accent'>
