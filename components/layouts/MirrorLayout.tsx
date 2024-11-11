@@ -1,27 +1,27 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
-import About from '@/components/About';
+import Profile from '@/components/Profile';
 import Work from '@/components/Work';
-import Contact from '@/components/Contact';
+import Connect from '@/components/Connect';
 
 const MirrorLayout = () => {
-  const [mirror, setMirror] = useState('about');
+  const [mirror, setMirror] = useState('profile');
 
   const sections = [
-    { title: 'About', link: '/about' },
-    { title: 'Work', link: '/work' },
-    { title: 'Contact', link: '/contact' },
+    { title: 'Profile' },
+    { title: 'Work' },
+    { title: 'Connect' },
   ];
 
   const renderContent = () => {
     switch (mirror) {
-      case 'about':
-        return <About />;
+      case 'profile':
+        return <Profile />;
       case 'work':
         return <Work />;
-      case 'contact':
-        return <Contact />;
+      case 'connect':
+        return <Connect />;
       default:
         return null;
     }
@@ -38,11 +38,12 @@ const MirrorLayout = () => {
           <Link
             key={section.title}
             href='#'
-            className='tranimate'
+            className={`tranimate ${
+              section.title.toLowerCase() === mirror
+                ? 'text-accent'
+                : 'text-text'
+            }`}
             onClick={() => setMirror(section.title.toLowerCase())}
-            style={{
-              color: section.title.toLowerCase() === mirror ? 'black' : 'white',
-            }}
           >
             <h2>{section.title}</h2>
           </Link>

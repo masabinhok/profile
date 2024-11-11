@@ -3,16 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --background: #000000;
-  --text: #ededed;
-  --accent: #ffffff;
-  --primary: #c6c7f7;
+  --foreground: #60a5fa;
+  --background: #3b82f6;
+  --text: #ddedaa;
+  --accent: #fcb0b3;
+  --primary: #f0cf65;
 }
 
-/* [data-theme='dark'] {
-  --background: #000000;
-  --text: #ededed;
-  --accent: #1e1e1e;
+/* A theme */
+/* 
+[data-theme='dark'] {
+  --background: #0fa3b1;
+  --primary: #f7a072;
+  --accent: #d9e5d6;
+  --text: #eddea4;
 } */
 
 * {
@@ -45,11 +49,10 @@
   }
 
   .water {
-    @apply bg-gradient-to-b from-blue-500 to-blue-400;
+    @apply bg-gradient-to-b from-background to-foreground;
   }
-
   .water-reverse {
-    @apply bg-gradient-to-t from-blue-500 to-blue-400;
+    @apply bg-gradient-to-t from-background to-foreground;
   }
   .ani-button {
     @apply animated-button tranimate;

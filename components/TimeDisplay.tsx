@@ -15,7 +15,7 @@ const TimeDisplay: React.FC<{ dateString: string }> = ({ dateString }) => {
   }, [dateString]);
 
   return (
-    <span className='italic font-light text-accent'>
+    <span className='italic font-normal  text-accent'>
       {time.days} days, {time.hours} hours, {time.minutes} minutes and{' '}
       {time.seconds < 10 ? '0' + time.seconds : time.seconds} seconds
     </span>
