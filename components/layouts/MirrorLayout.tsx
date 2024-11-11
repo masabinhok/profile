@@ -1,12 +1,17 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Profile from '@/components/Profile';
 import Work from '@/components/Work';
 import Connect from '@/components/Connect';
 
 const MirrorLayout = () => {
-  const [mirror, setMirror] = useState('profile');
+  const [mirror, setMirror] = useState<string | null>('profile');
+
+  useEffect(() => {
+    const storedState = localStorage.getItem('mirror');
+    setMirror(storedState);
+  }, []);
 
   const sections = [
     { title: 'Profile' },
@@ -43,7 +48,10 @@ const MirrorLayout = () => {
                 ? 'text-accent'
                 : 'text-text'
             }`}
-            onClick={() => setMirror(section.title.toLowerCase())}
+            onClick={() => {
+              localStorage.setItem('mirror', section.title.toLowerCase());
+              setMirror(section.title.toLowerCase());
+            }}
           >
             <h2>{section.title}</h2>
           </Link>
