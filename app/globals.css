@@ -35,8 +35,24 @@
   }
 }
 
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .animated-button {
   animation: ani-button 1s infinite;
+}
+
+.flicker {
+  animation: flicker 1s infinite;
 }
 
 @layer utilities {
